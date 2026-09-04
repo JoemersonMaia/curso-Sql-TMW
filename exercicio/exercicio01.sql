@@ -1,4 +1,6 @@
 SELECT *
 
     
-FROM idTransacaoProduto
+FROM transacoes
+
+WHERE QtdePontos = '1'
