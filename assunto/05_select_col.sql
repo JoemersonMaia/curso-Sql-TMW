@@ -1,10 +1,7 @@
-SELECT *
-        --QtdePontos,
-        --QtdePontos + 10 AS QtdePontosPlus10,
-        --QtdePontos * 2 AS QtdePontosDouble,
+SELECT  IdTransacao,
         DtCriacao,
         datetime(substr(DtCriacao,1,19)) AS DtCriacaoNova,
         strftime('%w', datetime(substr(DtCriacao,1,19))) AS DiaSemana
+FROM transacoes
 
-FROM clientes
-
+WHERE DiaSemana = '6' or DiaSemana = '5'
