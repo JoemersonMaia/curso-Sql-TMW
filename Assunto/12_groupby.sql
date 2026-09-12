@@ -1,13 +1,13 @@
-SELECT IdProduto,
-       count(*)
-
-FROM transacao_produto
-
-GROUP BY IdProduto;
+--SELECT IdProduto,
+--       count(*)
+--
+--FROM transacao_produto
+--
+--GROUP BY IdProduto;
 
 SELECT IdCliente,
        sum(QtdePontos) AS totalPontos,
-       count(IdTransacao)
+       count(IdTransacao) AS totalTransacoes
 
 FROM transacoes
 
