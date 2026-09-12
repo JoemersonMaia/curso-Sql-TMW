@@ -18,4 +18,3 @@ GROUP BY IdCliente
 HAVING sum(QtdePontos) >= 4000
 
 ORDER BY sum(QtdePontos) DESC
-;
