@@ -1,7 +1,8 @@
 --Do início ao fim do nosso curso (2025/08/25 a 2025/08/29), 
 --quantos clientes assinaram a lista de presença?
 
-SELECT *
+SELECT count(DISTINCT t1.IdCliente)
+
 
 FROM transacoes AS t1
 
