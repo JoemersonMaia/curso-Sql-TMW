@@ -13,5 +13,5 @@ WITH tb_sumario_dias AS(
 
 SELECT 
 *,
-sum(qteTransacoes)  OVER (ORDER BY dtDia) ASqteTransacoesCum
+sum(qteTransacoes)  OVER (ORDER BY dtDia) AS qteTransacoesCum
 FROM tb_sumario_dias
