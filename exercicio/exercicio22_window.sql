@@ -7,12 +7,15 @@ WITH tb_qtde_transacoes_dia AS(
     FROM transacoes 
 
     GROUP BY IdCLiente, DiaSemana
+),
 
-    ORDER BY IdCLiente, qtdeTransacoes DESC
+tb_rn AS(
+    SELECT
+    *,
+    Row_Number() OVER (PARTITION BY IdCliente ORDER BY qtdeTransacoes DESC) AS MelhorDia
+    FROM tb_qtde_transacoes_dia
 )
 
-SELECT
-IdCliente,
-Row_Number(qtdeTransacoes) OVER (ORDER BY DiaSemana) AS MelhorDia,
-qtdeTransacoes
-FROM tb_qtde_transacoes_dia
+SELECT *
+FROM tb_rn
+WHERE MelhorDia = 1
