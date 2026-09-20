@@ -8,9 +8,17 @@ WITH tb_qtdeCadastros AS (
     GROUP BY DtDia
 
     ORDER BY DtCriacao
+),
+
+tb_abs_acum AS(
+    SELECT
+    *,
+    sum(qtdeCadastro) OVER (ORDER BY dtDia) AS sumDia
+    FROM tb_qtdeCadastros
 )
 
-SELECT
-*,
-sum(qtdeCadastro) OVER (ORDER BY dtDia) AS sumDia
-FROM tb_qtdeCadastros
+SELECT 
+*
+FROM tb_abs_acum
+
+WHERE sumDia >=3000
