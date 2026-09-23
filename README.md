@@ -62,9 +62,18 @@ Ao final deste curso, você terá uma base sólida em:
 * Window Functions
 * Conceitos de DDL e DML
 
+## 📊 Dados utilizados
+
+Durante o curso, foram utilizados dados do **Loyalty System**, disponibilizados por **Téo Me Why** no Kaggle.
+
+Dataset:
+https://www.kaggle.com/datasets/teocalvo/teomewhy-loyalty-system
+
 ## 🙏 Créditos
 
 Curso ministrado por **Téo Me Why**.
+
+Dados disponibilizados por **Téo Me Why** através do Kaggle.
 
 ## 📌 Status
 
